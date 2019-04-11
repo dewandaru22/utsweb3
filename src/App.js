@@ -2,27 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
 class App extends Component {
+  
 
-  constructor(props) {
-		super(props);
-		
-		this.state = {
-      background: 'Red'
-		};
-	  }
-	
-	clicked(menu) {
-		/*this.setState({
-			active: menu,
-    });*/
-    this.setState({
-      name: menu.name,
-      background: menu.background,
-    });
-  }
-
-	getInitialState(){
+  getInitialState(){
     return {
         colors: [
             'red',
@@ -32,7 +16,31 @@ class App extends Component {
     }
   }
 
+  constructor(props) {
+		super(props);
+		
+		this.state = {
+      colors: 'red'
+		};
+	  }
+	
+	clicked(menu) {
+		/*this.setState({
+			active: menu,
+    });*/
+    this.setState({
+      name: menu.name,
+      colors: menu.colors,
+    });
+  }
+
+	
+
 render() {
+
+  var buttonStyle = {
+    marginBottom:4
+  };
 
   var divStyle = {
     backgroundColor:this.state.colorSelected,
@@ -42,7 +50,7 @@ render() {
 
     return (
             <div>
-        <button onClick={this.handleButton}>Ganti Tema</button>
+        <button onClick={this.handleButton} style={buttonStyle}>Ganti Tema</button>
           <div style={divStyle}>
             <p>{this.state.colorSelected}</p>
           </div>
@@ -50,22 +58,7 @@ render() {
     );
   }
 
-handleButton() {
 
-  var indexColor = this.state.background.findIndex(
-    color => color == this.state.colorSelected
-  );
-
-  var colorSelected;
-
-  if (typeof this.state.colors[indexColor+1] === 'undefined'){
-    colorSelected = 'red'
-  }
-  else {
-    colorSelected = this.state.colors[indexColor+1];
-  }
-  this.setState({colorSelected});
-}
 }
 
 export default App;

@@ -4,14 +4,15 @@ import './Custom.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
 const items = [
     {
         name    : 'light',
-        background   : 'Red',
+        colors   : 'red',
     },
     {
         name    : 'dark',
-        background   : 'Blue',
+        colors   : 'blue',
     }
 ];
 

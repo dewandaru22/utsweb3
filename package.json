@@ -2,7 +2,7 @@
   "name": "web3",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dewandaru22.github.io/reactjs-web3",
+  "homepage": "https://dewandaru22.github.io/utsweb3",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.4",
